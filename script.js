@@ -1,7 +1,7 @@
 //set display variables
 let firstNumber = 0;
 let secondNumber = 0;
-let operator = "+";
+let operator = "";
 
 //arithmetic functions
 function sum(a, b) {
@@ -24,18 +24,24 @@ function divide(a, b) {
 }
 console.log(divide(60, 15));
 
+function mod(a, b) {
+  return a % b;
+}
+
 //operate function
 function operate(num1, operator, num2) {
   if (operator === "+") {
-   return sum(num1, num2);
+    return sum(num1, num2);
   } else if (operator === "-") {
-   return subtract(num1, num2);
+    return subtract(num1, num2);
   } else if (operator === "*") {
-   return multiply(num1, num2);
+    return multiply(num1, num2);
   } else if (operator === "/") {
     return divide(num1, num2);
+  } else if (operator === "%") {
+    return mod(num1, num2);
   }
 }
 
-const subtraction = operate(100,"-",50);
+const subtraction = operate(100, "-", 50);
 console.log(subtraction);
